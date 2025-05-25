@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.home-page-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.left-content-container {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.buttons-section {
+    display: flex;
+    gap: 20px;
+}
+
+.whole-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons-section > button {
+    background-color: #e6e6e6;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    height: 2rem;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.buttons-section>button:first-child {
+    color: white;
+    font-weight: 700;
+    background-color: black;
+}
+
+.left-content-container>h1 {
+    color: blueviolet;
+}
+
+.left-content-container>p {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.7); 
+    font-weight: 400;
+}
+
+.left-content-container:first-child {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.right-content-container>img {
+    width:  700px;
+    height: 750px;
+    object-fit: cover;
+}
+
+.role-heading-container {
+    line-height: 5.5rem;
+}
+
+.left-content-container>div:nth-child(2) {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #252a2a;
+}
+
+.role-heading {
+    display: flex;
+    font-size: 6rem;
+    font-weight: 700;
+    color: #252a2a;
+}
+
+.role-heading>div:first-child {
+    color: blueviolet;
+}
+
+.wave-container {
+    display: flex;
+}
+
+.wave-icon {
+    vertical-align: -0.8rem;
+    height: 45px;
+    width: 45px;
+}

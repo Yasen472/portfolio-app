@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.navbar-container {
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+    /* min-width: 80%; */
+    font-weight: 250;
+    min-height: 2rem;
+    padding-top: 20px;
+}
+
+.switch-mode-container>svg {
+    font-size: 2rem;
+}
+
+.switch-mode-container-mobile {
+    display: none;
+}
+
+.nav-links-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.nav-links-container>a {
+    /* I have to read about the clamp property */
+    /* font-size: clamp(1rem, 1.5rem, 2.2rem); */
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+a.active {
+    color: blueviolet;
+}
+
+.nav-name-heading>span {
+    font-weight: 300;
+    font-size: 1.5rem;
+    /* font-size: clamp(1rem, 1.5rem, 2.2rem); */
+    cursor: pointer;
+}
+
+.header-dot {
+    font-weight: 500;
+    color: blueviolet;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: black;
+    }
+
+    .navbar-container {
+        padding: 2rem 2rem;
+        justify-content: space-between;
+    }
+
+    .nav-links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .links {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 20px;
+        transition: right 0.5s ease, opacity 0.5s ease;
+        opacity: 0;
+        /* this is so the links are displayed over the main content */
+        z-index: 999;
+    }
+
+    .links.active {
+        right: 0;
+        opacity: 1;
+        min-height: 100%;
+    }
+
+    .links>a {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 1.5rem;
+        text-align: left;
+        transition: background-color 0.3s;
+    }
+
+    .links>a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .switch-mode-container-mobile {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .switch-mode-container-mobile > svg {
+        position: fixed;
+        top: 95%;
+        right: 5%;
+    }
+
+    .switch-mode-container {
+        display: none;
+    }
+
+
+}
