@@ -2,17 +2,15 @@
 
 .home-page-container {
     display: flex;
+    height: 100vh;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    height: 100vh;
     overflow-y: hidden;
 }
 
 .left-content-container {
     font-family: 'Poppins', sans-serif;
 }
-
 
 .buttons-section {
     display: flex;
@@ -25,18 +23,18 @@
 }
 
 .buttons-section > button {
+    font-size: clamp(1rem, 50%, 1.2rem);
     background-color: #e6e6e6;
-    font-weight: 700;
+    font-weight: bold;
     border-radius: 0.5rem;
-    height: 2rem;
     border: none;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 14px 28px;
 }
 
 .buttons-section>button:first-child {
     color: white;
-    font-weight: 700;
+    font-weight: bold;
     background-color: black;
 }
 
@@ -45,19 +43,20 @@
 }
 
 .left-content-container>p {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     color: rgba(0, 0, 0, 0.7); 
     font-weight: 400;
 }
 
 .left-content-container:first-child {
-    font-size: 2rem;
+    padding-left: 2rem;
+    font-size: clamp(1rem, 50vw, 2rem);
     font-weight: 600;
 }
 
 .right-content-container>img {
-    width:  700px;
-    height: 750px;
+    max-width: 80%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -66,15 +65,14 @@
 }
 
 .left-content-container>div:nth-child(2) {
-    font-size: 6rem;
-    font-weight: 700;
+    font-size: clamp(1.5rem, 5vw, 6rem);
+    font-weight: bold;
     color: #252a2a;
 }
 
 .role-heading {
     display: flex;
-    font-size: 6rem;
-    font-weight: 700;
+    font-weight: bold;
     color: #252a2a;
 }
 
@@ -87,7 +85,19 @@
 }
 
 .wave-icon {
-    vertical-align: -0.8rem;
+    vertical-align: -0.7rem;
     height: 45px;
     width: 45px;
+}
+
+@media (max-width: 768px) {
+    .home-page-container {
+        display: flex;
+        height: auto;
+        flex-direction: column-reverse;;
+    }
+
+    .role-heading-container {
+        line-height: none;
+    }
 }
