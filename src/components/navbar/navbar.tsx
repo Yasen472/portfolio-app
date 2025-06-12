@@ -1,5 +1,4 @@
 import './navbar.css';
-import { Link } from "react-router-dom";
 import { useState } from 'react';
 import { IoMenu } from "react-icons/io5";
 import { IoMoonOutline } from "react-icons/io5";
@@ -54,9 +53,11 @@ function Navbar() {
             <div className={`links ${menuOpened ? 'active' : ''}`}>
 
                 <div className="nav-links-container">
-                    <Link to="/" onClick={toggleVisitedState}>Home</Link>
-                    <Link to="/projects" onClick={toggleVisitedState}>Projects</Link>
-                    <Link to="/about" onClick={toggleVisitedState}>About</Link>
+
+                    <a href="#home-section" onClick={toggleVisitedState}>Home</a>
+                    <a href="#about-section" onClick={toggleVisitedState}>About</a>
+                    <a href="#projects-section" onClick={toggleVisitedState}>Projects</a>
+
                 </div>
                 
 
@@ -68,8 +69,6 @@ function Navbar() {
                     < MdSunny />
                 }
             </div>
-
-            
 
             <div className="switch-mode-container-mobile" onClick={handleIconChange}>
                 {darkModeEnabled ?
